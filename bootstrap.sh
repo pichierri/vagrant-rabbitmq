@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-sudo apt-get update
-
 cat >> /etc/apt/apt.conf <<EOT
 Acquire
 {
   http::User-Agent "Mozilla/5.0 (Windows NT 5.1; rv:25.0) Gecko/20100101 Firefox/25.0";
 };
 EOT
+
+sudo apt-get update
 
 cat >> /etc/apt/sources.list <<EOT
 deb http://www.rabbitmq.com/debian/ testing main
